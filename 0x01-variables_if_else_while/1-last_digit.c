@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /** 
@@ -12,8 +13,9 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	
-	int lastDigit = n % 10;
+	int lastDigit;
 
+	lastDigit = n % 10;
 	printf("Last digit of %d is %d and ", n, lastDigit);
 	if (lastDigit >= 6)
 	{
