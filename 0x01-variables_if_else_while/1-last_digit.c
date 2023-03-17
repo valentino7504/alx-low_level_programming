@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/** 
+/**
  * main - This function is to check the last digit of a number
  * Return: 0 if no errors
  */
