@@ -3,7 +3,7 @@
  * main - print all single digit numbers
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 	int i;
 
