@@ -45,4 +45,12 @@ int print_sign(int n);
  * Return: absolute value of the integer
  */
 int _abs(int);
+
+/**
+ * print_last_digit - prints last digit of a number
+ * @int: number to be checked
+ * Return: last digit
+ */
+int print_last_digit(int);
+
 #endif
