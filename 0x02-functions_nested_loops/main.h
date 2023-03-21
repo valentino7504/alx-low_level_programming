@@ -74,4 +74,10 @@ int add(int, int);
  * @n: Start point
  */
 void print_to_98(int n);
+
+/**
+ * print_times_table - prints times table from 0 to n
+ * @n: end point
+ */
+void print_times_table(int n);
 #endif
