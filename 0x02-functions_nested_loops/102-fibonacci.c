@@ -1,34 +1,25 @@
 #include <stdio.h>
-
 /**
- * fibonacci - gets fibonacci number
- * @n: the position in fibonacci series
- * Return: the fibonacci number
- */
-long int fibonacci(long int n)
-{
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else
-	{
-		return (fibonacci(n - 2) + fibonacci(n - 1));
-	}
-}
-
-/**
- * main - main function for fibonacci
- * Return: 0
+ * main - main function
+ *
+ * Return: nothing
  */
 int main(void)
 {
-	long int i;
+	int counter = 2;
+	long int a = 1;
+	long int b = a + 1;
+	long int c = a + b;
 
-	for (i = 1; i <= 50; i++)
+	printf("%ld, %ld, ", a, b);
+	while (counter < 50)
 	{
-		printf("%ld", fibonacci(i));
-		if (i != 50)
+		printf("%ld", c);
+		counter++;
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 50)
 		{
 			printf(", ");
 		}
