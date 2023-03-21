@@ -39,4 +39,10 @@ int _isalpha(int c);
  */
 int print_sign(int n);
 
+/**
+ * _abs - computes absolute value of an integer
+ * @int - parameter to be checked
+ * Return: absolute value of the integer
+ */
+int _abs(int);
 #endif
