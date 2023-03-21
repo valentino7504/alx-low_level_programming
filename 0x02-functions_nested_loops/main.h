@@ -53,7 +53,7 @@ int _abs(int);
  */
 int print_last_digit(int);
 
-/** 
+/**
  * jack_bauer - print all minutes in the day
  */
 void jack_bauer(void);
@@ -65,7 +65,7 @@ void times_table(void);
 
 /**
  * add - adds two integers
- * Return - Returns the sum
+ * Return: Returns the sum
  */
 int add(int, int);
 #endif
