@@ -16,6 +16,11 @@ int main(void)
 		{
 			sum += i;
 		}
+		else
+		{
+			continue;
+		}
 	}
+
 	printf("%d\n", sum);
 }
