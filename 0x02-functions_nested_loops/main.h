@@ -62,4 +62,10 @@ void jack_bauer(void);
  * times_table - print times table form 0 to 9
  */
 void times_table(void);
+
+/**
+ * add - adds two integers
+ * Return - Returns the sum
+ */
+int add(int, int);
 #endif
