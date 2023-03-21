@@ -53,4 +53,8 @@ int _abs(int);
  */
 int print_last_digit(int);
 
+/** 
+ * jack_bauer - print all minutes in the day
+ */
+void jack_bauer(void);
 #endif
