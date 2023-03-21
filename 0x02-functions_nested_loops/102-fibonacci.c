@@ -5,7 +5,7 @@
  * @n: the position in fibonacci series
  * Return: the fibonacci number
  */
-int fibonacci(int n)
+long int fibonacci(long int n)
 {
 	if (n == 0 || n == 1)
 	{
