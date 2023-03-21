@@ -28,7 +28,15 @@ int _islower(int c);
 /**
  * _isalpha - checks if a character is a letter
  * @c: character to be checked
- * Return: 1 if it is a letter else 0 
+ * Return: 1 if it is a letter else 0
  */
 int _isalpha(int c);
+
+/**
+ * print_sign - prints the sign of a number
+ * @n: number to be checked
+ * Return: -1, 0, +1 if n is -ve, 0 or +ve resp.
+ */
+int print_sign(int n);
+
 #endif
