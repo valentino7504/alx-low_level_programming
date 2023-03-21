@@ -68,4 +68,10 @@ void times_table(void);
  * Return: Returns the sum
  */
 int add(int, int);
+
+/**
+ * print_to_98 - prints all numbers from start point to 98
+ * @n: Start point
+ */
+void print_to_98(int n)
 #endif
