@@ -23,11 +23,11 @@ int fibonacci(int n)
  */
 int main(void)
 {
-	int i;
+	long int i;
 
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%d", fibonacci(i));
+		printf("%ld", fibonacci(i));
 		if (i != 50)
 		{
 			printf(", ");
