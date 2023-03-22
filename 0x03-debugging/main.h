@@ -9,4 +9,12 @@
  */
 void positive_or_negative(int i);
 
+/**
+ * largest_number - returns the largest of 3 ints
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
+ * Return: the largest integer
+ */
+int largest_number(int a, int b, int c);
 #endif /* MAIN_H */
