@@ -17,4 +17,20 @@ void positive_or_negative(int i);
  * Return: the largest integer
  */
 int largest_number(int a, int b, int c);
+
+/**
+ * convert_day - converts month to days
+ * @month: month
+ * @day: day
+ * Return: no of days passed in the year
+ */
+int convert_day(int month, int day);
+
+/**
+ * print_remaining_days - print remaining days in the year
+ * @month: month
+ * @day: day
+ * @year: year
+ */
+void print_remaining_days(int month, int day, int year);
 #endif /* MAIN_H */
