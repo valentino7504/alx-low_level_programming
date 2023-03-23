@@ -61,4 +61,10 @@ void print_diagonal(int n);
  * @size: size of the square
  */
 void print_square(int size);
+
+/**
+ * print_triangle - function to print a triangle in the console
+ * @size: size of the triangle
+ */
+void print_triangle(int size);
 #endif
