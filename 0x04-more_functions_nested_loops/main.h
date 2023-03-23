@@ -28,4 +28,9 @@ int _isdigit(int c);
  * Return: product of a and b
  */
 int mul(int a, int b);
+
+/**
+ * print_numbers - prints numbers from 0 to 9
+ */
+void print_numbers(void);
 #endif
