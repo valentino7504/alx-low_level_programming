@@ -49,4 +49,10 @@ void more_numbers(void);
  * @n: length of the line
  */
 void print_line(int n);
+
+/**
+ * print_diagonal - prints a diagonal line in the console
+ * @n: number of lines
+ */
+void print_diagonal(int n);
 #endif
