@@ -67,4 +67,10 @@ void print_square(int size);
  * @size: size of the triangle
  */
 void print_triangle(int size);
+
+/**
+ * print_number - prints out any integer
+ * @n: number
+ */
+void print_number(int n);
 #endif
