@@ -43,4 +43,10 @@ void print_most_numbers(void);
  * more_numbers - print 0 to 14
  */
 void more_numbers(void);
+
+/**
+ * print_line - prints a line in the terminal
+ * @n: length of the line
+ */
+void print_line(int n);
 #endif
