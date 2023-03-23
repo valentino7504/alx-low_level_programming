@@ -55,4 +55,10 @@ void print_line(int n);
  * @n: number of lines
  */
 void print_diagonal(int n);
+
+/**
+ * print_square - prints a square in the terminal
+ * @size: size of the square
+ */
+void print_square(int size);
 #endif
