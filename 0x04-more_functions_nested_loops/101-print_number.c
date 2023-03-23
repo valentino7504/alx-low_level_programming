@@ -10,7 +10,7 @@ void print_number(int n)
 	int number_of_zeros = 0;
 	int i, j;
 	int divisor = 1;
-	
+
 	while (a >= 10)
 	{
 		a /= 10;
@@ -29,7 +29,7 @@ void print_number(int n)
 		{
 			divisor *= 10;
 		}
-		_putchar((a/divisor) + '0');
+		_putchar((a / divisor) + '0');
 		a = a % divisor;
 	}
 }
