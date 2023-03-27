@@ -73,4 +73,11 @@ void print_array(int *a, int n);
  * Return: string
  */
 char *_strcpy(char *dest, char *src);
+
+/**
+ * _atoi - converts a string to an integer
+ * @s: the string to be checked
+ * Return: the number
+ */
+int _atoi(char *s);
 #endif
