@@ -42,8 +42,8 @@ int _atoi(char *s)
 	}
 	if (positive < 0)
 	{
-		number *= -1
+		number *= -1;
 	}
 
-	return (number)
+	return (number);
 }
