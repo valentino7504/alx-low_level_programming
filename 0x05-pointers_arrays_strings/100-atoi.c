@@ -31,5 +31,10 @@ int _atoi(char *s)
 		}
 		i++;
 	}
+
+	if (sign % 2 == 0)
+	{
+		digit *= -1;
+	}
 	return (number);
 }
