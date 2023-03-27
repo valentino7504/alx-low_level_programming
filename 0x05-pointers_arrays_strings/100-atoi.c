@@ -23,10 +23,6 @@ int _atoi(char *s)
 		}
 		else if (s[j] == '-')
 		{
-			sign--;
-		}
-		else if (s[j] == '+')
-		{
 			sign++;
 		}
 	}
@@ -44,7 +40,7 @@ int _atoi(char *s)
 		i++;
 	}
 
-	if (sign < 0)
+	if (sign % 2 != 0)
 	{
 		number *= -1;
 	}
