@@ -35,15 +35,15 @@ int _atoi(char *s)
 	}
 	while (digits > 0)
 	{
-		num += (s[i - 1] - '0') * power;
+		number += (s[i - 1] - '0') * power;
 		power *= 10;
 		i--;
 		digits--;
 	}
 	if (positive < 0)
 	{
-		num *= -1
+		number *= -1
 	}
 
-	return (num)
+	return (number)
 }
