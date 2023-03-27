@@ -11,7 +11,7 @@ int _atoi(char *s)
 	int i = 0;
 	int length = _strlen(s);
 	int digit = 0;
-	int number = 0;
+	unsigned int number = 0;
 	int sign = 0;
 	int j = 0;
 
