@@ -52,4 +52,10 @@ void rev_string(char *s);
  * @str: string to be printed
  */
 void puts2(char *str);
+
+/**
+ * puts_half - prints second half of a string
+ * @str: string to be printed
+ */
+void puts_half(char *str);
 #endif
