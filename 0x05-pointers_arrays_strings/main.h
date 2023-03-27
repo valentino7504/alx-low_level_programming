@@ -46,4 +46,10 @@ void print_rev(char *s);
  * @s: string to be reversed
  */
 void rev_string(char *s);
+
+/**
+ * puts2 - prints only characters at even spots in a string
+ * @str: string to be printed
+ */
+void puts2(char *str);
 #endif
