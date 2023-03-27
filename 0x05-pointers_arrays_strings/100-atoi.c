@@ -13,13 +13,25 @@ int _atoi(char *s)
 	int digit = 0;
 	int number = 0;
 	int sign = 0;
+	int j = 0;
 
-	while (i < length)
+	for (j = 0; j < length; j++)
 	{
-		if (s[i] == '-')
+		if (s[j] <= '9' && s[j] >= '0')
+		{
+			break;
+		}
+		else if (s[j] == '-')
+		{
+			sign--;
+		}
+		else if (s[j] == '+')
 		{
 			sign++;
 		}
+	}
+	while (i < length)
+	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
@@ -32,9 +44,9 @@ int _atoi(char *s)
 		i++;
 	}
 
-	if (sign % 2 != 0)
+	if (sign < 0)
 	{
-		digit *= -1;
+		number *= -1;
 	}
 	return (number);
 }
