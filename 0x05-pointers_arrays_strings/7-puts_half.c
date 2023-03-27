@@ -11,7 +11,7 @@ void puts_half(char *str)
 	int i;
 	int odd_even = 0;
 
-	if (length % 2 == 0)
+	if (length % 2 != 0)
 	{
 		odd_even++;
 	}
