@@ -7,7 +7,6 @@
 void _puts(char *str)
 {
 	int i;
-	int length = 0;
 
 	for (i = 0; i < _strlen(str); i++)
 	{
