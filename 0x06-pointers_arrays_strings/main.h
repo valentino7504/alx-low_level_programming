@@ -22,4 +22,13 @@ int _strlen(char *s);
  * Return: a pointer to the new string
  */
 char *_strcat(char *dest, char *src);
+
+/**
+ * _strncpy - copies n bytes from src to dest
+ * @dest: the destination string
+ * @src: the source string
+ * @n: the number of bytes to copy
+ * Return: the copied string
+ */
+char *_strncpy(char *dest, char *src, int n);
 #endif
