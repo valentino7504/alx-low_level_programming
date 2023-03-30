@@ -62,4 +62,11 @@ void reverse_array(int *a, int n);
  * Return: the uppercase string
  */
 char *string_toupper(char *s);
+
+/**
+ * cap_string - capitalises first letters of a string
+ * @s: the string
+ * Return: the capitalised string
+ */
+char *cap_string(char *s);
 #endif
