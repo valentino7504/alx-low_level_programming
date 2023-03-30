@@ -48,4 +48,11 @@ char *_strncat(char *dest, char *src, int n);
  * Return: difference between first non matching character
  */
 int _strcmp(char *s1, char *s2);
+
+/**
+ * reverse_array - reverses an array in place
+ * @a: an array
+ * @n: the number of elements in the array
+ */
+void reverse_array(int *a, int n);
 #endif
