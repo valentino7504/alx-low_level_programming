@@ -31,7 +31,7 @@ char *cap_string(char *s)
 {
 	int i;
 
-	for (i = 0; i <= _strlen(s); i++)
+	for (i = 0; i < _strlen(s); i++)
 	{
 		if (check_char(s[i]))
 		{
