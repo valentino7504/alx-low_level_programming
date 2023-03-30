@@ -37,7 +37,7 @@ char *cap_string(char *s)
 		{
 			continue;
 		}
-		if ((s[i] >= 97 && s[i] <= 122 && check_char(s[i - 1])) || i == 0)
+		if (s[i] >= 97 && s[i] <= 122 && (check_char(s[i - 1]) || i == 0))
 		{
 			s[i] -= 32;
 		}
