@@ -69,4 +69,11 @@ char *string_toupper(char *s);
  * Return: the capitalised string
  */
 char *cap_string(char *s);
+
+/**
+ * leet - changes string to leet encoding
+ * @s: the string
+ * Return: the encoded string
+ */
+char *leet(char *s);
 #endif
