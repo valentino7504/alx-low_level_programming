@@ -33,7 +33,11 @@ char *cap_string(char *s)
 
 	for (i = 0; i <= _strlen(s); i++)
 	{
-		if (s[i] >= 97 && s[i] <= 122 && check_char(s[i - 1]))
+		if (check_char(s[i]))
+		{
+			continue;
+		}
+		if ((s[i] >= 97 && s[i] <= 122 && check_char(s[i - 1])) || i == 0)
 		{
 			s[i] -= 32;
 		}
