@@ -40,4 +40,12 @@ char *_strncpy(char *dest, char *src, int n);
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n);
+
+/**
+ * _strcmp - compares two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: difference between first non matching character
+ */
+int _strcmp(char *s1, char *s2);
 #endif
