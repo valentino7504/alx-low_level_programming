@@ -76,4 +76,11 @@ char *cap_string(char *s);
  * Return: the encoded string
  */
 char *leet(char *s);
+
+/**
+ * rot13 - rot13 encryption
+ * @s: the string
+ * Return: the new string
+ */
+char *rot13(char *s);
 #endif
