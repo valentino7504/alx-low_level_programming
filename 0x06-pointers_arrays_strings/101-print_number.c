@@ -6,8 +6,9 @@
  */
 void print_number(int n)
 {
-	int zeros, i, n_copy;
-	int divisor = 1;
+	int zeros, i;
+	unsigned int n_copy;
+	unsigned int divisor = 1;
 
 	if (n < 0)
 	{
