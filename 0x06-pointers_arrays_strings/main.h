@@ -83,4 +83,10 @@ char *leet(char *s);
  * Return: the new string
  */
 char *rot13(char *s);
+
+/**
+ * print_number - print an integer
+ * @n: the number to print
+ */
+void print_number(int n);
 #endif
