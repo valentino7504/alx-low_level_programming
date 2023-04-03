@@ -9,30 +9,14 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, flag;
+	int i, j;
 
 	for (i = 0; i < _strlen(haystack); i++)
 	{
-		flag = 0;
-		if (haystack[i] == needle[0])
-		{
-			for (j = 0; j < _strlen(needle); j++)
-			{
-				if (needle[j] == haystack[i + j])
-				{
-					flag = 1;
-				}
-				else
-				{
-					flag = 0;
-					break;
-				}
-			}
-		}
-		if (j == _strlen(needle) && flag == 1)
-		{
+		for (j = 0; needle[j] && haystack[i + j] == needle[j]; j++)
+			;
+		if (!needle[j])
 			return (haystack + i);
-		}
 	}
 	return ((void *)0);
 }
