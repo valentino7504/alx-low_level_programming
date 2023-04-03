@@ -23,4 +23,13 @@ int _strlen(char *s);
  * Return: s
  */
 char *_memset(char *s, char b, unsigned int n);
+
+/**
+ * _memcpy - copies n bytes from src to dest
+ * @dest: the destination string
+ * @src: the source string
+ * @n: the number of bytes to be copied
+ * Return: the dest string
+ */
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif
