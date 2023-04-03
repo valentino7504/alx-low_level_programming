@@ -1,5 +1,5 @@
 #include "main.h"
-#include "strlen.c"
+
 /**
  * _memset - fills first n bytes of memory with b
  * @s: memory area
