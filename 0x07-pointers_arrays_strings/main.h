@@ -32,4 +32,12 @@ char *_memset(char *s, char b, unsigned int n);
  * Return: the dest string
  */
 char *_memcpy(char *dest, char *src, unsigned int n);
+
+/**
+ * _strchr - returns the first occurence of a character in a string
+ * @s: the string
+ * @c: the character
+ * Return: the first occurence of c
+ */
+char *_strchr(char *s, char c);
 #endif
