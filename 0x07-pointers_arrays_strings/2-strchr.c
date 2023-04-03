@@ -20,5 +20,10 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
+	if (s[i] == c)
+	{
+		index = i;
+		return (s + index);
+	}
 	return ((void *)0);
 }
