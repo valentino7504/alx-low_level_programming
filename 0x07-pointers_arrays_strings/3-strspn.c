@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "strlen.c"
 /**
  * get_stop - gets the stop index
  * @s1: the og string
