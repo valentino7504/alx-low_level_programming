@@ -56,4 +56,12 @@ char *_strchr(char *s, char c);
  * Return: the number of bytes
  */
 unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strpbrk - locates first occurence of a string in another
+ * @s: the string to be checked in
+ * @accept: the substring
+ * Return: the pointer to the rest of the string
+ */
+char *_strpbrk(char *s, char *accept);
 #endif
