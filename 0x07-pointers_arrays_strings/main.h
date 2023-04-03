@@ -64,4 +64,12 @@ unsigned int _strspn(char *s, char *accept);
  * Return: the pointer to the rest of the string
  */
 char *_strpbrk(char *s, char *accept);
+
+/**
+ * _strstr - finds the first occurrence of the needle in the haystack
+ * @haystack: the haystack to be checked
+ * @needle: the needle string to be found
+ * Return: pointer to incidence
+ */
+char *_strstr(char *haystack, char *needle);
 #endif
