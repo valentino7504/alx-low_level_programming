@@ -8,8 +8,8 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j;
-	unsigned int diag1_sum = 0;
-	unsigned int diag2_sum = 0;
+	long int diag1_sum = 0;
+	long int diag2_sum = 0;
 
 	for (i = 0; i < size; i++)
 	{
@@ -25,5 +25,5 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
-	printf("%u, %u\n", diag1_sum, diag2_sum);
+	printf("%ld, %ld\n", diag1_sum, diag2_sum);
 }
