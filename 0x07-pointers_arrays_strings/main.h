@@ -1,5 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
+/**
+ * _strncpy - copies n bytes from src to dest
+ * @dest: the destination string
+ * @src: the source string
+ * @n: the number of bytes to copy
+ * Return: the copied string
+ */
+char *_strncpy(char *dest, char *src, int n);
 
 /**
  * _putchar - prints a character to the output stream
@@ -40,4 +48,12 @@ char *_memcpy(char *dest, char *src, unsigned int n);
  * Return: the first occurence of c
  */
 char *_strchr(char *s, char c);
+
+/**
+ * strspn - Returns the number of bytes in s consisting of bytes from accept
+ * @s: the string
+ * @accept: the string to be used
+ * Return: the number of bytes
+ */
+unsigned int _strspn(char *s, char *accept);
 #endif
