@@ -18,12 +18,15 @@ char *_strstr(char *haystack, char *needle)
 		{
 			for (j = 0; j < _strlen(needle) && haystack[i + j] != '\0'; j++)
 			{
-				if (j == (_strlen(needle) - 2) && haystack[i + j + 1] == '\0')
-				{
-					flag = 0;
+				/**
+				* if (j == (_strlen(needle) - 2) && haystack[i + j + 1] == '\0')
+				* {
+				*	flag = 0;
 					break;
-				}
-				else if (needle[j] == haystack[i + j])
+				* }
+				* else
+				*/
+				if (needle[j] == haystack[i + j])
 				{
 					flag = 1;
 				}
