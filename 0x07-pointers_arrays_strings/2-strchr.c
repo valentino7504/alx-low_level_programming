@@ -1,5 +1,5 @@
 #include "main.h"
-#include "strlen.c" 
+#include "strlen.c"
 /**
  * _strchr - returns the first occurence of a character in a string
  * @s: the string
@@ -20,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	return ((void*)0);
+	return ((void *)0);
 }
