@@ -72,4 +72,10 @@ char *_strpbrk(char *s, char *accept);
  * Return: pointer to incidence
  */
 char *_strstr(char *haystack, char *needle);
+
+/**
+ * print_chessboard - prints a char chessboard
+ * @a: the board details
+ */
+void print_chessboard(char (* a)[8]);
 #endif

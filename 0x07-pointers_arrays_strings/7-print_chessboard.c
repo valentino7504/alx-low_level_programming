@@ -1,0 +1,20 @@
+#include "main.h"
+#include "strlen.c"
+#include <stdio.h>
+/**
+ * print_chessboard - prints a char chessboard
+ * @a: the board details
+ */
+void print_chessboard(char (* a)[8])
+{
+	int i, j;
+
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < _; j++)
+		{
+			_putchar(a[i][j]);
+		}
+		_putchar('\n');
+	}
+}
