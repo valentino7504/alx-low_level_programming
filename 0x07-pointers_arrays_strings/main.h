@@ -77,5 +77,5 @@ char *_strstr(char *haystack, char *needle);
  * print_chessboard - prints a char chessboard
  * @a: the board details
  */
-void print_chessboard(char (* a)[8]);
+void print_chessboard(char (*a)[8]);
 #endif
