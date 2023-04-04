@@ -85,4 +85,11 @@ void print_chessboard(char (*a)[8]);
  * @size: the size of the matrix
  */
 void print_diagsums(int *a, int size);
+
+/**
+ * set_string - sets value of a pointer to a string
+ * @s: the source
+ * @to: the destination
+ */
+void set_string(char **s, char *to);
 #endif
