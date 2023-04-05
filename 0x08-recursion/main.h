@@ -48,4 +48,11 @@ int factorial(int n);
  * Return: x ^ y
  */
 int _pow_recursion(int x, int y);
+
+/**
+ * _sqrt_recursion - calculate square root of a number recursively
+ * @n: the number
+ * Return: the square root
+ */
+int _sqrt_recursion(int n);
 #endif
