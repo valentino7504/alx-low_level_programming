@@ -33,4 +33,11 @@ void _print_rev_recursion(char *s);
  * Return: the length of the string
  */
 int _strlen_recursion(char *s);
+
+/**
+ * factorial - calculate factorial of a number
+ * @n: the number
+ * Return: n! or -1 if n < 0
+ */
+int factorial(int n);
 #endif
