@@ -3,27 +3,21 @@
  * sqrt_helper - helper function for sqrt
  * @num: the number
  * @start: start point
- * @end: the end point
+ * Return: the square root
  */
-int sqrt_helper(int num, int start, int end)
+int sqrt_helper(int num, int start)
 {
-	int mid = (start + end) / 2;
-
-	if (end < start)
+	if (start * start > num)
 	{
 		return (-1);
 	}
-	if (mid * mid == num)
+	else if (start * start == num)
 	{
-		return (mid);
-	}
-	else if (mid * mid < num)
-	{
-		return (sqrt_helper(num, mid + 1, end));
+		return (start);
 	}
 	else
 	{
-		return (sqrt_helper(num, 1, mid - 1));
+		return (sqrt_helper(num, start + 1));
 	}
 }
 
@@ -38,5 +32,5 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
-	return sqrt_helper(n, 1, n);
+	return (sqrt_helper(n, 1));
 }
