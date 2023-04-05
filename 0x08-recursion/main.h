@@ -26,4 +26,11 @@ void _puts_recursion(char *s);
  * @s: the string to be printed
  */
 void _print_rev_recursion(char *s);
+
+/**
+ * _strlen_recursion - calculates strlen using recursion
+ * @s: the string
+ * Return: the length of the string
+ */
+int _strlen_recursion(char *s);
 #endif
