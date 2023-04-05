@@ -40,4 +40,12 @@ int _strlen_recursion(char *s);
  * Return: n! or -1 if n < 0
  */
 int factorial(int n);
+
+/**
+ * _pow_recursion - calculates x to power y
+ * @x: the base
+ * @y: the exponent
+ * Return: x ^ y
+ */
+int _pow_recursion(int x, int y);
 #endif
