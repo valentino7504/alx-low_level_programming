@@ -28,5 +28,5 @@ int palindrome_helper(char *s, int i, int n)
  */
 int is_palindrome(char *s)
 {
-	return(palindrome_helper(s, 0, _strlen(s)));
+	return (palindrome_helper(s, 0, _strlen(s)));
 }
