@@ -5,6 +5,7 @@
  * @s: the string to be checked
  * @i: the index to be checked
  * @n: the length of the string
+ * Return: 1 if the string is a palindrome
  */
 int palindrome_helper(char *s, int i, int n)
 {
