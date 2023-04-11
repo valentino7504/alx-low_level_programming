@@ -39,5 +39,6 @@ char *argstostr(int ac, char **av)
 		stop_point++;
 	}
 	concatenated[stop_point] = '\0';
+	printf("%s", concatenated);
 	return (concatenated);
 }
