@@ -7,38 +7,37 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
-	int **grid;
+	int **matrix, i, j;
 
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
-
-	grid = malloc(height * sizeof(int *));
-	if (grid == NULL)
+	matrix = malloc(sizeof(int *) * height);
+	if (matrix == NULL)
 	{
 		return (NULL);
 	}
 
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = malloc(width * sizeof(int));
-		if (grid[i] == NULL)
+		matrix[i] = malloc(sizeof(int) * width);
+		if (matrix[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
 			{
-				free(grid[j]);
+				free(matrix[j]);
 			}
-			free(grid);
+			free(matrix);
 			return (NULL);
 		}
-
+	}
+	for (i = 0; i < height; i++)
+	{
 		for (j = 0; j < width; j++)
 		{
-			grid[i][j] = 0;
+			matrix[i][j] = 0;
 		}
 	}
-
-	return (grid);
+	return (matrix);
 }
