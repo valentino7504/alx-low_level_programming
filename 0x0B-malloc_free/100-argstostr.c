@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include "strlen.c"
+#include <stdio.h>
 /**
- * argsttostr - concatenates args into a string
+ * argstostr - concatenates args into a string
  * @ac: the number of args
  * @av: the args
  * Return: a concat string
