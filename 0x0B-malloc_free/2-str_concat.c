@@ -10,30 +10,35 @@ char *str_concat(char *s1, char *s2)
 {
 	int i, new_length, j;
 	char *concatenated;
+	int s1_length, s2_length;
 
-	if (s1 == NULL && s2 != NULL)
+	if (s1 == NULL)
 	{
-		return (s2);
+		s1_length = 0;
 	}
-	else if (s1 != NULL && s2 == NULL)
+	else
 	{
-		return (s1);
+		s1_length = _strlen(s1);
 	}
-	else if (s1 == NULL && s2 == NULL)
+	if (s2 == NULL)
 	{
-		return (NULL);
+		s2_length = 0;
 	}
-	new_length = _strlen(s1) + _strlen(s2) + 1;
+	else
+	{
+		s2_length = _strlen(s2);
+	}
+	new_length = s1_length + s2_length + 1;
 	concatenated = malloc(sizeof(char) * new_length);
 	if (concatenated == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < _strlen(s1); i++)
+	for (i = 0; i < s1_length; i++)
 	{
 		concatenated[i] = s1[i];
 	}
-	for (j = 0; j < _strlen(s2); j++)
+	for (j = 0; j < s2_length; j++)
 	{
 		concatenated[i + j] = s2[j];
 	}
