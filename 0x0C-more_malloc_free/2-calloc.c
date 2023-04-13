@@ -7,8 +7,9 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *allocated;
+	void *allocated;
 	unsigned int i;
+	char *zero_ptr;
 
 	if (nmemb <= 0 || size <= 0)
 	{
@@ -19,9 +20,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+	zero_ptr = (char *) allocated;
 	for (i = 0; i < nmemb * size; i++)
 	{
-		allocated[i] = 0;
+		zero_ptr[i] = 0;
 	}
 	return (allocated);
 }
