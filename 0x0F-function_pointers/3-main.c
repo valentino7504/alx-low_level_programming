@@ -23,6 +23,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
+	if (get_op_func(argv[2]) == NULL)
+	{
+		exit(99);
+	}
 	printf("%d\n", get_op_func(argv[2])(operand1, operand2));
 	return (0);
 }
