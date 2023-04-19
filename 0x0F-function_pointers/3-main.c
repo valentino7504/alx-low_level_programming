@@ -18,13 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(argv[2]) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if ((get_op_func(argv[2]) == op_div || get_op_func(argv[2]) == op_mod)
-	 && operand2 == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && operand2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
