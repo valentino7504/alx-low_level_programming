@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
 {
 	int operand1, operand2;
 
-	operand1 = atoi(argv[1]);
-	operand2 = atoi(argv[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	operand1 = atoi(argv[1]);
+	operand2 = atoi(argv[3]);
 	if (get_op_func(argv[2]) == NULL)
 	{
 		exit(99);
