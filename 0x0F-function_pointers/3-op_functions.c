@@ -10,6 +10,16 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
+ * op_sub - subtracts two integers
+ * @a: int1
+ * @b: int2
+ * Return: a-b
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
  * op_mul - multiplication
  * @a: int1
  * @b: int2
@@ -28,16 +38,6 @@ int op_mul(int a, int b)
 int op_div(int a, int b)
 {
 	return (a / b);
-}
-/**
- * op_sub - subtracts two integers
- * @a: int1
- * @b: int2
- * Return: a-b
- */
-int op_sub(int a, int b)
-{
-	return (a - b);
 }
 /**
  * op_mod - Modulo
