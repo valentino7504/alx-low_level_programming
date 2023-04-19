@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if ((*argv[2] == '/' || *argv[2] == '%') && operand2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	if (get_op_func(argv[2]) == NULL)
 	{
 		exit(99);
+	}
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	printf("%d\n", get_op_func(argv[2])(operand1, operand2));
 	return (0);
