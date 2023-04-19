@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	if ((get_op_func(argv[2]) == op_div || get_op_func(argv[2]) == op_mod)
 	 && operand2 == 0)
