@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdef.h>
+#include <stddef.h>
 /**
  * print_all - prints specific characters in a format string
  * @format: the string
