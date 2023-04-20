@@ -48,6 +48,7 @@ void print_all(const char * const format, ...)
 		default:
 			i++;
 			continue;
+			break;
 		}
 		print_comma(*(format + i + 1));
 		i++;
