@@ -1,80 +1,51 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include "variadic_functions.h"
 /**
- * print_char - prints char
- * @ap: list
+ * print_comma - prints a comma
+ * @character: the character to be checked
  */
-void print_char(va_list ap)
+void print_comma(char character)
 {
-	printf("%c", va_arg(ap, int));
+	if (character != '\0')
+		printf(", ");
 }
 /**
- * print_int - prints int
- * @ap: list
- */
-void print_int(va_list ap)
-{
-	printf("%d", va_arg(ap, int));
-}
-/**
- * print_float - prints float
- * @ap: list
- */
-void print_float(va_list ap)
-{
-	printf("%f", va_arg(ap, double));
-}
-/**
- * print_str - prints string
- * @ap: list
- */
-void print_str(va_list ap)
-{
-	char *str;
-
-	str = va_arg(ap, char *);
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
-}
-/**
- * print_all - prints different operations
- * @format: the format
+ * print_all - prints specific characters in a format string
+ * @format: the string
  */
 void print_all(const char * const format, ...)
 {
-	int i, j;
-	fmt_t operations[] = {
-		{"c", print_char},
-		{"s", print_str},
-		{"f", print_float},
-		{"i", print_int},
-		{NULL, NULL}
-	};
 	va_list ap;
-	char *first_sep = "";
-	char *second_sep = ", ";
+	char *string;
+	int i = 0;
 
 	va_start(ap, format);
-	i = 0;
-	while (format != NULL && *(format + i))
+	while (*(format + i) && format != NULL)
 	{
-		j = 0;
-		while (operations[j].op != NULL)
+		switch (*(format + i))
 		{
-			if (*(format + i) == *(operations[j].op))
-			{
-				printf("%s", first_sep);
-				operations[j].print_func(ap);
-			}
-			j++;
+		case 'c':
+			printf("%c", va_arg(ap, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(ap, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(ap, double));
+			break;
+		case 's':
+			string = va_arg(ap, char *);
+			if (string == NULL)
+				string = "(nil)";
+			printf("%s", string);
+			break;
+		default:
+			i++;
+			continue;
+			break;
 		}
-		first_sep = second_sep;
+		print_comma(*(format + i + 1));
 		i++;
 	}
 	printf("\n");
