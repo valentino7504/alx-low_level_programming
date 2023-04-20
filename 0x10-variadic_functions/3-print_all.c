@@ -1,56 +1,79 @@
-#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "variadic_functions.h"
 /**
- * print_comma - prints a comma
- * @character: the character to be checked
+ * print_char - prints char
+ * @ap: list
  */
-void print_comma(char character)
+void print_char(va_list ap)
 {
-	if (character != '\0')
-		printf(", ");
+	printf("%c", va_arg(ap, int));
 }
 /**
- * print_all - prints specific characters in a format string
- * @format: the string
+ * print_int - prints int
+ * @ap: list
+ */
+void print_int(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+/**
+ * print_float - prints float
+ * @ap: list
+ */
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+/**
+ * print_str - prints string
+ * @ap: list
+ */
+void print_str(va_list ap)
+{
+	char *str;
+
+	str = va_arg(ap, char *);
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", str);
+}
+/**
+ * print_all - prints different operations
+ * @format: the format
  */
 void print_all(const char * const format, ...)
 {
+	int i, j;
+	fmt_t operations[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"f", print_float},
+		{"i", print_int},
+		{NULL, NULL}
+	};
 	va_list ap;
-	char *string;
-	int i = 0;
+	char *first_sep = "";
+	char *second_sep = ", ";
 
 	va_start(ap, format);
-	while (*(format + i) && format != NULL)
+	while (format != NULL && *(format + i) != '\0')
 	{
-		switch (*(format + i))
+		j = 0;
+		while (operations[j].print_func != NULL)
 		{
-		case 'c':
-			printf("%c", va_arg(ap, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(ap, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(ap, double));
-			break;
-		case 's':
-			string = va_arg(ap, char *);
-			if (string == NULL)
+			if (*(format + i) == *(operations[j].op))
 			{
-				printf("(nil)");
-				print_comma(*(format + i + 1));
-				i++;
-				continue;
+				printf("%s", first_sep);
+				operations[j].print_func(ap);
 			}
-			printf("%s", string);
-			break;
-		default:
-			i++;
-			continue;
-			break;
+			j++;
 		}
-		print_comma(*(format + i + 1));
+		first_sep = second_sep;
 		i++;
 	}
 	printf("\n");
