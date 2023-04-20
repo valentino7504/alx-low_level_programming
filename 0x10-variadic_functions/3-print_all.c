@@ -1,49 +1,51 @@
-#include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 /**
- * print_all - prints specific characters in a format string
- * @format: the string
+ * print_all - print any argument provided
+ * @format: argument specifier
+ *
+ * Return: any argument given based on specified format
  */
 void print_all(const char * const format, ...)
 {
-	va_list ap;
-	char *string;
-	int i, status_check;
+	int i, check_stat; /* declare variables and va_arg datatype */
+	char *str;
+	va_list spc;
 
-	va_start(ap, format);
+	va_start(spc, format); /* initilaize var arguments */
 	i = 0;
-	while (*(format + i) != '\0' && format != NULL)
+	while (format != NULL && format[i] != '\0')
 	{
-		switch (*(format + i))
+		switch (format[i])
 		{
-		case 'c':
-			printf("%c", va_arg(ap, int));
-			status_check = 0;
-			break;
-		case 'i':
-			printf("%d", va_arg(ap, int));
-			status_check = 0;
-			break;
-		case 'f':
-			printf("%f", va_arg(ap, double));
-			status_check = 0;
-			break;
-		case 's':
-			string = va_arg(ap, char *);
-			if (string == NULL)
-				string = "(nil)";
-			printf("%s", string);
-			status_check = 0;
-			break;
-		default:
-			status_check = 1;
-			break;
+			case 'i':
+				printf("%d", va_arg(spc, int));
+				check_stat = 0; /* check if condition has been met */
+				break;
+			case 'f':
+				printf("%f", va_arg(spc, double));
+				check_stat = 0;
+				break;
+			case 'c':
+				printf("%c", va_arg(spc, int));
+				check_stat = 0;
+				break;
+			case 's':
+				str = va_arg(spc, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s", str);
+				check_stat = 0;
+				break;
+			default:
+				check_stat = 1;
+				break;
 		}
-		if (status_check == 0 && *(format + i + 1) != '\0')
+		if (format[i +  1] != '\0' && check_stat == 0) /* if NOT NULL */
 			printf(", ");
-		i++;
+		i++; /* update step of iter var */
 	}
 	printf("\n");
-	va_end(ap);
+	va_end(spc); /* end traversal */
 }
