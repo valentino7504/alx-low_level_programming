@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include "variadic_functions.h"
 /**
  * print_comma - prints a comma
  * @character: the character to be checked
@@ -22,7 +21,7 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	va_start(ap, format);
-	while (*(format + i))
+	while (*(format + i) && format != NULL)
 	{
 		switch (*(format + i))
 		{
