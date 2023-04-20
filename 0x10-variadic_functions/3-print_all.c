@@ -8,42 +8,42 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list spc;
-	char *str;
-	int index = 0, check_stat;
+	va_list ap;
+	char *str_text;
+	int index = 0, status_check;
 
-	va_start(spc, format);
+	va_start(ap, format);
 	while (format != NULL && format[index] != '\0')
 	{
 		switch (*(format + index))
 		{
 		case 'c':
-			printf("%c", va_arg(spc, int));
-			check_stat = 0;
+			printf("%c", va_arg(ap, int));
+			status_check = 0;
 			break;
 		case 'i':
-			printf("%d", va_arg(spc, int));
-			check_stat = 0;
+			printf("%d", va_arg(ap, int));
+			status_check = 0;
 			break;
 		case 'f':
-			printf("%f", va_arg(spc, double));
-			check_stat = 0;
+			printf("%f", va_arg(ap, double));
+			status_check = 0;
 			break;
 		case 's':
-			str = va_arg(spc, char *);
-			if (str == NULL)
-				str = "(nil)";
-			printf("%s", str);
-			check_stat = 0;
+			str_text = va_arg(ap, char *);
+			if (str_text == NULL)
+				str_text = "(nil)";
+			printf("%s", str_text);
+			status_check = 0;
 			break;
 		default:
-			check_stat = 1;
+			status_check = 1;
 			break;
 		}
-		if (check_stat == 0 && *(format + index + 1) != '\0')
+		if (status_check == 0 && *(format + index + 1) != '\0')
 			printf(", ");
 		index++;
 	}
 	printf("\n");
-	va_end(spc);
+	va_end(ap);
 }
