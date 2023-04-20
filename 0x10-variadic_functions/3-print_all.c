@@ -1,49 +1,49 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stddef.h>
+
 /**
  * print_all - prints specific characters in a format string
  * @format: the string
  */
 void print_all(const char * const format, ...)
 {
-	va_list ap;
-	char *string;
-	int i, status_check;
+	va_list spc;
+	char *str;
+	int index = 0, check_stat;
 
-	va_start(ap, format);
-	i = 0;
-	while (format[i] != '\0' && format != NULL)
+	va_start(spc, format);
+	while (format != NULL && format[index] != '\0')
 	{
-		switch (format[i])
+		switch (*(format + index))
 		{
 		case 'c':
-			printf("%c", va_arg(ap, int));
-			status_check = 0;
+			printf("%c", va_arg(spc, int));
+			check_stat = 0;
 			break;
 		case 'i':
-			printf("%d", va_arg(ap, int));
-			status_check = 0;
+			printf("%d", va_arg(spc, int));
+			check_stat = 0;
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double));
-			status_check = 0;
+			printf("%f", va_arg(spc, double));
+			check_stat = 0;
 			break;
 		case 's':
-			string = va_arg(ap, char *);
-			if (string == NULL)
-				string = "(nil)";
-			printf("%s", string);
-			status_check = 0;
+			str = va_arg(spc, char *);
+			if (str == NULL)
+				str = "(nil)";
+			printf("%s", str);
+			check_stat = 0;
 			break;
 		default:
-			status_check = 1;
+			check_stat = 1;
 			break;
 		}
-		if (status_check == 0 && format[i + 1] != '\0')
+		if (check_stat == 0 && *(format + index + 1) != '\0')
 			printf(", ");
-		i++;
+		index++;
 	}
 	printf("\n");
-	va_end(ap);
+	va_end(spc);
 }
