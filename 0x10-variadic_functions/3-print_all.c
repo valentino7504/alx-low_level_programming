@@ -9,7 +9,11 @@
 void print_comma(char character)
 {
 	if (character != '\0')
+	{
 		printf(", ");
+		return;
+	}
+	printf("\n");
 }
 /**
  * print_all - prints specific characters in a format string
@@ -53,5 +57,4 @@ void print_all(const char * const format, ...)
 		print_comma(*(format + i + 1));
 		i++;
 	}
-	printf("\n");
 }
