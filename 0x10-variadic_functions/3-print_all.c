@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include "variadic_functions.h"
 /**
+ * print_comma - prints a comma
+ * @character: the character to be checked
+ */
+void print_comma(char character)
+{
+	if (character != '\0')
+		printf(", ");
+}
+/**
  * print_all - prints specific characters in a format string
  * @format: the string
  */
@@ -31,8 +40,7 @@ void print_all(const char * const format, ...)
 			if (string == NULL)
 			{
 				printf("(nil)");
-				if (*(format + i + 1) != '\0')
-					printf(", ");
+				print_comma(*(format + i + 1));
 				i++;
 				continue;
 			}
@@ -42,8 +50,7 @@ void print_all(const char * const format, ...)
 			i++;
 			continue;
 		}
-		if (*(format + i + 1) != '\0')
-			printf(", ");
+		print_comma(*(format + i + 1));
 		i++;
 	}
 	printf("\n");
