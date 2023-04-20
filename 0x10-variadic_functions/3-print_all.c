@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 	while (format != NULL && *(format + i))
 	{
 		j = 0;
-		while (operations[j].print_func != NULL)
+		while (operations[j].op != NULL)
 		{
 			if (*(format + i) == *(operations[j].op))
 			{
