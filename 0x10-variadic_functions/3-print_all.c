@@ -9,10 +9,9 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	char *string;
-	int i;
+	int i = 0;
 
 	va_start(ap, format);
-	i = 0;
 	while (*(format + i))
 	{
 		if (*(format + i) == 'c')
@@ -31,9 +30,7 @@ void print_all(const char * const format, ...)
 		{
 			string = va_arg(ap, char *);
 			if (string == NULL)
-			{
 				printf("(nil)");
-			}
 			else
 			{
 				printf("%s", string);
@@ -45,9 +42,7 @@ void print_all(const char * const format, ...)
 			continue;
 		}
 		if (*(format + i + 1) != '\0')
-		{
 			printf(", ");
-		}
 		i++;
 	}
 	printf("\n");
