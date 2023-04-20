@@ -61,7 +61,8 @@ void print_all(const char * const format, ...)
 	char *second_sep = ", ";
 
 	va_start(ap, format);
-	while (format != NULL && *(format + i) != '\0')
+	i = 0;
+	while (format != NULL && *(format + i))
 	{
 		j = 0;
 		while (operations[j].print_func != NULL)
