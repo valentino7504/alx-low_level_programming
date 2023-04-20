@@ -9,11 +9,11 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	char *string;
-	int i = 0;
-	int status_check;
+	int i, status_check;
 
 	va_start(ap, format);
-	while (*(format + i) && format != NULL)
+	i = 0;
+	while (*(format + i) != '\0' && format != NULL)
 	{
 		switch (*(format + i))
 		{
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 			status_check = 1;
 			break;
 		}
-		if (!(status_check) && *(format + i + 1))
+		if (status_check == 0 && *(format + i + 1) != '\0')
 			printf(", ");
 		i++;
 	}
