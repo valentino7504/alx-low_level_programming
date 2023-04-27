@@ -2,8 +2,8 @@
           extern    printf
 main:
 	  mov   edi, format
-	  xor   eax, eax
+	  xor   ebx, ebx
 	  call  printf
-	  mov 	eax, 0
+	  mov 	ebx, 0
 	  ret
 format: db `Hello, Holberton\n`,0
