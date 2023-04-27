@@ -17,5 +17,5 @@ list_t *add_node(list_t **head, const char *str)
 	temp->len = _strlen_const(temp->str);
 	temp->next = *head;
 	*head = temp;
-	return (*head);
+	return (temp);
 }
