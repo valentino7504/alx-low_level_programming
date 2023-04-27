@@ -1,5 +1,4 @@
 #include "lists.h"
-#include "strlen.c"
 /**
  * add_node - adds a node to a linked list
  * @head: the head of the list
@@ -9,7 +8,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp = NULL;
-	int count;
+	int count = 0;
 
 	while (str[count])
 		count++;

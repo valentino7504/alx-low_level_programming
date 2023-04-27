@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <string.h>
 int _putchar(char c);
-int _strlen(char *s);
-int _strlen_const(const char *s);
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
