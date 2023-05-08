@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copied_file = open(argv[1], O_RDWR);
+	copied_file = open(argv[1], O_RDONLY);
 	if (copied_file == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if (read_bytes == -1)
+	if (read_bytes == -1 || new_file == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
