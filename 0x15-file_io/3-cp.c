@@ -39,8 +39,14 @@ int main(int argc, char *argv[])
 	if (read_bytes == -1)
 		print_error(98, "Error: Can't read from file %s\n", argv[1]);
 	if (close(new_file) == -1)
-		print_error(100, "Error: Can't close fd %d\n", new_file);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", new_file);
+		exit(100);
+	}
 	if (close(copied_file) == -1)
-		print_error(100, "Error: Can't close fd %d\n", copied_file);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", copied_file);
+		exit(100);
+	}
 	return (0);
 }
