@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	new_file = open(argv[2], O_TRUNC | O_RDWR | O_CREAT, 0665);
+	new_file = open(argv[2], O_TRUNC | O_RDWR | O_CREAT, 0664);
 	while ((read_bytes = read(copied_file, buffer, BUFFER_SIZE)) > 0)
 	{
 		if (write(new_file, buffer, read_bytes) == -1)
