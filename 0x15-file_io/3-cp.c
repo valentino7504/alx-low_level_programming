@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	while ((read_bytes = read(copied_file, buffer, BUFFER_SIZE)) > 0)
 	{
 		write_check = write(new_file, buffer, read_bytes);
-		if (write_check == -1 || write_check != read_bytes)
+		if (write_check == -1)
 			print_error(98, "Can't write to %s\n", argv[2]);
 	}
 	if (read_bytes == -1)
