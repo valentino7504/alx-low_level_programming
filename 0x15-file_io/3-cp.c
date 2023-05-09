@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	copied_file = open(argv[1], O_RDONLY);
 	if (copied_file == -1)
 		print_error(98, "Error: Can't read from file %s\n", argv[1]);
-	new_file = open(argv[2], O_TRUNC | O_RDWR | O_CREAT, 0664);
+	new_file = open(argv[2], O_TRUNC | O_WRONLY | O_CREAT, 0664);
 	if (new_file == -1)
 		print_error(99, "Can't write to %s\n", argv[2]);
 	while ((read_bytes = read(copied_file, buffer, BUFFER_SIZE)) > 0)
