@@ -24,12 +24,12 @@ def island_perimeter(grid):
         for j in range(len(grid[i])):
             cell = row[j]
             if cell == 1:
-                if row[j + 1] != 1:
+                if j >= len(grid[i]) - 1 or row[j + 1] != 1:
                     perimeter += 1
-                if row[j - 1] != 1:
+                if j <= 0 or row[j - 1] != 1:
                     perimeter += 1
-                if grid[i + 1][j] != 1:
+                if i >= len(grid) - 1 or grid[i + 1][j] != 1:
                     perimeter += 1
-                if grid[i - 1][j] != 1:
+                if i <= 0 or grid[i - 1][j] != 1:
                     perimeter += 1
     return perimeter
