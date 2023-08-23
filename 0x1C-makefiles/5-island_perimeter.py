@@ -13,8 +13,13 @@ def island_perimeter(grid):
     '''
     if type(grid) != list or grid == [] or grid == [[]]:
         return 0
+    if len(grid) > 100 or len(grid[0]) > 100:
+        return 0
+    init_length = len(grid[0])
     perimeter = 0
     for i in range(len(grid)):
+        if len(row) != init_length:
+            return 0
         row = grid[i]
         for j in range(len(grid[i])):
             cell = row[j]
